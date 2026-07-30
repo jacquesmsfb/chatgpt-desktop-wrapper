@@ -1,0 +1,27 @@
+node_modules/
+dist/
+build/
+.temp/
+*.log
+.env
+.env.*
+!.env.example
+
+# Tauri
+src-tauri/target/
+src-tauri/gen/schemas/
+
+# IDE
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# TypeScript
+tsconfig.tsbuildinfo
+
+# Testing
+coverage/
+test-results/
+playwright-report/

@@ -1,0 +1,25 @@
+[package]
+name = "chatgpt-desktop-wrapper"
+version = "0.1.0"
+description = "A professional desktop workspace for ChatGPT"
+authors = ["you"]
+edition = "2021"
+
+[lib]
+name = "chatgpt_desktop_wrapper_lib"
+crate-type = ["lib", "cdylib", "staticlib"]
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri = { version = "2", features = ["tray-icon"] }
+tauri-plugin-shell = "2"
+tauri-plugin-dialog = "2"
+tauri-plugin-notification = "2"
+tauri-plugin-clipboard-manager = "2"
+tauri-plugin-process = "2"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+rusqlite = { version = "0.31", features = ["bundled"] }
+tokio = { version = "1", features = ["full"] }
